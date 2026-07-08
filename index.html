@@ -313,6 +313,206 @@
     </div>
   </main>
 
+  <!-- SEGUNDA DOBRA: Experiência & Conversão -->
+  <section id="experience" class="relative z-10 w-full min-h-screen flex flex-col items-center justify-center py-24 md:py-32 px-6 lg:px-12 border-t border-zinc-800/50 bg-[#050505] overflow-hidden">
+    
+    <!-- Transition Line -->
+    <div class="transition-line absolute top-0 left-1/2 -translate-x-1/2 w-[2px] h-32 bg-gradient-to-b from-orange-600/80 to-transparent opacity-0"></div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 w-full max-w-7xl mx-auto relative z-10">
+      
+      <!-- Coluna Esquerda: 55% (~7 columns) -->
+      <div class="lg:col-span-7 flex flex-col justify-center left-col-exp">
+        <!-- Label -->
+        <div class="exp-label text-[10px] font-mono text-orange-600 uppercase tracking-[0.25em] mb-6 flex items-center gap-3 opacity-0">
+          <span class="flex h-1.5 w-1.5 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full bg-orange-500 opacity-75"></span>
+            <span class="relative inline-flex h-1.5 w-1.5 bg-orange-600"></span>
+          </span>
+          DESIGN • PERFORMANCE • CONVERSÃO
+        </div>
+
+        <!-- Título -->
+        <h2 class="exp-title text-3xl md:text-5xl font-medium tracking-tight leading-[1.1] text-zinc-300 hover:text-white transition-colors duration-500 cursor-default group mb-6 opacity-0">
+          Seu site recebe visitas.<br />
+          Mas ele <span class="text-transparent [-webkit-text-stroke:1px_rgba(234,88,12,0.8)] group-hover:text-orange-500 group-hover:[-webkit-text-stroke:0px] transition-all duration-500 group-hover:drop-shadow-[0_0_15px_rgba(234,88,12,0.5)]">convence</span>?
+        </h2>
+
+        <!-- Descrição -->
+        <p class="exp-desc text-sm md:text-base text-zinc-500 hover:text-zinc-300 font-mono leading-relaxed mb-12 max-w-lg opacity-0 transition-colors duration-500 cursor-default">
+          Cada detalhe comunica algo.<br />
+          Performance, movimento, hierarquia e experiência influenciam a forma como as pessoas enxergam sua empresa antes mesmo da primeira conversa.
+        </p>
+
+        <!-- Blocos Verticais -->
+        <div class="flex flex-col gap-8 mb-12">
+          
+          <div class="exp-block border-l-2 border-zinc-800 pl-5 opacity-0 transition-all duration-300 hover:border-orange-500 cursor-default group relative">
+            <div class="absolute -left-[2px] top-0 bottom-0 w-[2px] bg-orange-500 shadow-[0_0_12px_rgba(234,88,12,0.8)] scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+            <div class="transform transition-transform duration-300 group-hover:translate-x-1">
+              <h3 class="text-[10px] text-zinc-300 group-hover:text-orange-400 font-mono uppercase tracking-widest mb-2 transition-colors duration-300">Performance</h3>
+              <p class="text-xs text-zinc-500 group-hover:text-zinc-400 font-sans leading-relaxed transition-colors duration-300">Cada milissegundo influencia a percepção da sua marca.</p>
+            </div>
+          </div>
+
+          <div class="exp-block border-l-2 border-zinc-800 pl-5 opacity-0 transition-all duration-300 hover:border-orange-500 cursor-default group relative">
+            <div class="absolute -left-[2px] top-0 bottom-0 w-[2px] bg-orange-500 shadow-[0_0_12px_rgba(234,88,12,0.8)] scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+            <div class="transform transition-transform duration-300 group-hover:translate-x-1">
+              <h3 class="text-[10px] text-zinc-300 group-hover:text-orange-400 font-mono uppercase tracking-widest mb-2 transition-colors duration-300">Experiência</h3>
+              <p class="text-xs text-zinc-500 group-hover:text-zinc-400 font-sans leading-relaxed transition-colors duration-300">Interfaces pensadas para guiar decisões, não apenas exibir informações.</p>
+            </div>
+          </div>
+
+          <div class="exp-block border-l-2 border-zinc-800 pl-5 opacity-0 transition-all duration-300 hover:border-orange-500 cursor-default group relative">
+            <div class="absolute -left-[2px] top-0 bottom-0 w-[2px] bg-orange-500 shadow-[0_0_12px_rgba(234,88,12,0.8)] scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top"></div>
+            <div class="transform transition-transform duration-300 group-hover:translate-x-1">
+              <h3 class="text-[10px] text-zinc-300 group-hover:text-orange-400 font-mono uppercase tracking-widest mb-2 transition-colors duration-300">Conversão</h3>
+              <p class="text-xs text-zinc-500 group-hover:text-zinc-400 font-sans leading-relaxed transition-colors duration-300">Projetos desenvolvidos para transformar atenção em oportunidades.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Botão -->
+        <div class="exp-btn opacity-0">
+          <a class="inline-flex items-center gap-2 text-xs text-zinc-300 hover:text-white uppercase tracking-widest transition-colors font-mono group" href="#">
+            Conheça minha metodologia
+            <iconify-icon class="group-hover:translate-x-1 transition-transform text-orange-600" icon="solar:arrow-right-linear" width="14"></iconify-icon>
+          </a>
+        </div>
+      </div>
+
+      <!-- Coluna Direita: 45% (~5 columns) Dashboard Vivo -->
+      <div class="lg:col-span-5 flex items-center justify-center lg:justify-end relative right-col-exp" style="perspective: 1000px;">
+        
+        <!-- Bento Grid Container -->
+        <div class="dashboard-bento w-full max-w-md grid grid-cols-2 gap-3 relative opacity-0 transform translate-y-10 scale-95" id="bento-grid">
+          
+          <!-- Subtle Glow Background for the whole grid -->
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-orange-600/5 rounded-full blur-3xl pointer-events-none"></div>
+
+          <!-- Card 1: Digital Experience Index (Destaque) -->
+          <div class="bento-card col-span-2 relative overflow-hidden bg-[#0A0A0C]/80 backdrop-blur-md border border-zinc-800/50 rounded-2xl p-5 flex flex-col group">
+            <div class="mouse-glow absolute inset-0 opacity-0 transition-opacity duration-300 pointer-events-none" style="background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.03), transparent 40%);"></div>
+            
+            <div class="flex justify-between items-start mb-4">
+              <div>
+                <h4 class="text-[9px] text-zinc-500 font-mono uppercase tracking-widest mb-1">Digital Experience Index</h4>
+                <div class="flex items-end gap-2">
+                  <span class="text-4xl text-white font-medium tracking-tight font-sans" id="dx-score">0.0</span>
+                  <span class="text-[10px] text-zinc-600 font-mono mb-1">/ 100</span>
+                </div>
+              </div>
+              <div class="w-6 h-6 rounded-full bg-orange-500/10 border border-orange-500/20 flex items-center justify-center">
+                <iconify-icon icon="solar:star-fall-linear" class="text-orange-400" width="12"></iconify-icon>
+              </div>
+            </div>
+
+            <!-- Mini Chart (SVG Vivo) -->
+            <div class="w-full h-16 relative mt-auto">
+              <!-- Animated SVG Line -->
+              <svg class="absolute inset-0 w-full h-full overflow-visible" preserveAspectRatio="none" viewBox="0 0 100 100">
+                <path class="bento-chart-glow" d="M0,80 Q25,60 50,70 T100,20" fill="none" stroke="rgba(234,88,12,0.2)" stroke-width="4" stroke-linecap="round" filter="blur(3px)" stroke-dasharray="200" stroke-dashoffset="200" />
+                <path class="bento-chart-line" d="M0,80 Q25,60 50,70 T100,20" fill="none" stroke="#ea580c" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="200" stroke-dashoffset="200" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- Card 2: Core Web Vitals -->
+          <div class="bento-card col-span-1 relative overflow-hidden bg-[#0A0A0C]/80 backdrop-blur-md border border-zinc-800/50 rounded-2xl p-4 flex flex-col justify-between group">
+            <div class="mouse-glow absolute inset-0 opacity-0 transition-opacity duration-300 pointer-events-none" style="background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.03), transparent 40%);"></div>
+            
+            <h4 class="text-[9px] text-zinc-500 font-mono uppercase tracking-widest mb-3">Core Web Vitals</h4>
+            
+            <div class="flex justify-between items-center px-1">
+              <!-- Ring 1 -->
+              <div class="relative w-8 h-8 flex items-center justify-center">
+                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="none" stroke="#27272a" stroke-width="1.5"></circle>
+                  <circle class="bento-ring text-green-500" cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="50" stroke-dashoffset="50" stroke-linecap="round"></circle>
+                </svg>
+                <span class="absolute text-[7px] text-white font-mono">LCP</span>
+              </div>
+              <!-- Ring 2 -->
+              <div class="relative w-8 h-8 flex items-center justify-center">
+                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="none" stroke="#27272a" stroke-width="1.5"></circle>
+                  <circle class="bento-ring text-orange-500" cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="50" stroke-dashoffset="50" stroke-linecap="round"></circle>
+                </svg>
+                <span class="absolute text-[7px] text-white font-mono">FID</span>
+              </div>
+              <!-- Ring 3 -->
+              <div class="relative w-8 h-8 flex items-center justify-center">
+                <svg class="w-full h-full transform -rotate-90" viewBox="0 0 20 20">
+                  <circle cx="10" cy="10" r="8" fill="none" stroke="#27272a" stroke-width="1.5"></circle>
+                  <circle class="bento-ring text-blue-500" cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="50" stroke-dashoffset="50" stroke-linecap="round"></circle>
+                </svg>
+                <span class="absolute text-[7px] text-white font-mono">CLS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Live Status -->
+          <div class="bento-card col-span-1 relative overflow-hidden bg-[#0A0A0C]/80 backdrop-blur-md border border-zinc-800/50 rounded-2xl p-4 flex flex-col justify-between group">
+            <div class="mouse-glow absolute inset-0 opacity-0 transition-opacity duration-300 pointer-events-none" style="background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.03), transparent 40%);"></div>
+            
+            <div class="flex justify-between items-center mb-2">
+              <h4 class="text-[9px] text-zinc-500 font-mono uppercase tracking-widest">System Status</h4>
+              <div class="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse shadow-[0_0_8px_rgba(34,197,94,0.6)]"></div>
+            </div>
+            
+            <div class="mt-auto">
+              <div class="text-xs text-white font-mono tracking-widest mb-0.5" id="live-time">00:00:00</div>
+              <p class="text-[8px] text-zinc-600 font-mono uppercase tracking-widest">Global Edge Network</p>
+            </div>
+          </div>
+
+          <!-- Card 4: Conversion Flow -->
+          <div class="bento-card col-span-2 relative overflow-hidden bg-[#0A0A0C]/80 backdrop-blur-md border border-zinc-800/50 rounded-2xl p-4 flex flex-col group">
+            <div class="mouse-glow absolute inset-0 opacity-0 transition-opacity duration-300 pointer-events-none" style="background: radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.03), transparent 40%);"></div>
+            
+            <div class="flex justify-between items-center mb-4">
+              <h4 class="text-[9px] text-zinc-500 font-mono uppercase tracking-widest">Conversion Pipeline</h4>
+              <span class="text-[9px] text-white font-mono bg-zinc-900 border border-zinc-800 px-1.5 py-0.5 rounded">Active</span>
+            </div>
+
+            <div class="flex items-center justify-between w-full relative px-2 mt-auto">
+              <!-- Connecting Line -->
+              <div class="absolute left-6 right-6 top-1/2 -translate-y-1/2 h-[1px] bg-zinc-800/60 z-0"></div>
+              <div class="absolute left-6 right-6 top-1/2 -translate-y-1/2 h-[1px] bg-orange-500/50 z-0 scale-x-0 origin-left bento-flow-line"></div>
+
+              <!-- Nodes -->
+              <div class="relative z-10 flex flex-col items-center gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center bento-node">
+                  <div class="w-1 h-1 bg-zinc-500 rounded-full"></div>
+                </div>
+                <span class="text-[7px] text-zinc-500 font-mono uppercase tracking-widest">Entry</span>
+              </div>
+
+              <div class="relative z-10 flex flex-col items-center gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center bento-node">
+                  <div class="w-1 h-1 bg-zinc-500 rounded-full"></div>
+                </div>
+                <span class="text-[7px] text-zinc-500 font-mono uppercase tracking-widest">Engage</span>
+              </div>
+
+              <div class="relative z-10 flex flex-col items-center gap-1.5">
+                <div class="w-3 h-3 rounded-full bg-orange-950 border border-orange-500/50 flex items-center justify-center bento-node">
+                  <div class="w-1.5 h-1.5 bg-orange-500 rounded-full shadow-[0_0_5px_rgba(234,88,12,0.5)]"></div>
+                </div>
+                <span class="text-[7px] text-orange-400 font-mono uppercase tracking-widest">Convert</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -506,6 +706,131 @@
           scrub: true
         }
       });
+
+    // ─── Segunda Dobra (Experiência & Conversão) ───
+    gsap.set([".exp-label", ".exp-title", ".exp-desc", ".exp-btn"], { y: 30 });
+    gsap.set(".exp-block", { x: -20 });
+    
+    const expTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#experience",
+        start: "top 75%",
+        once: true
+      }
+    });
+
+    // 1. Linha de Transição do Vídeo
+    expTl.to(".transition-line", {
+      opacity: 1,
+      height: 128,
+      duration: 1,
+      ease: "power3.inOut"
+    });
+
+    // 2. Coluna Esquerda
+    expTl.to(".exp-label", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.2");
+    expTl.to(".exp-title", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.4");
+    expTl.to(".exp-desc", { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" }, "-=0.6");
+    
+    expTl.to(".exp-block", {
+      opacity: 1,
+      x: 0,
+      duration: 0.6,
+      stagger: 0.15,
+      ease: "power2.out"
+    }, "-=0.4");
+
+    expTl.to(".exp-btn", { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, "-=0.2");
+
+    // 3. Coluna Direita (Dashboard Bento Grid)
+    expTl.to("#bento-grid", {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      duration: 1.2,
+      ease: "expo.out"
+    }, "-=1.4");
+
+    // Inicialmente esconder os cards antes do grid aparecer
+    gsap.set(".bento-card", { opacity: 0 });
+
+    expTl.to(".bento-card", {
+      opacity: 1,
+      duration: 0.8,
+      stagger: 0.1,
+      ease: "power2.out"
+    }, "-=1.0");
+
+    // 4. Desenho dos SVGs
+    expTl.to(".bento-chart-glow", { strokeDashoffset: 0, duration: 2, ease: "power2.inOut" }, "-=0.6");
+    expTl.to(".bento-chart-line", { strokeDashoffset: 0, duration: 2, ease: "power2.inOut" }, "-=2");
+    
+    // Rings
+    expTl.to(".bento-ring", { strokeDashoffset: 10, duration: 1.5, stagger: 0.1, ease: "power2.out" }, "-=1.5");
+    
+    // Conversion Flow Line
+    expTl.to(".bento-flow-line", { scaleX: 1, duration: 1.5, ease: "power3.inOut" }, "-=1.5");
+    expTl.from(".bento-node", { opacity: 0, scale: 0, duration: 0.4, stagger: 0.2, ease: "back.out(2)" }, "-=1.0");
+
+    // 5. Contadores Numericos
+    const scoreObj = { val: 0 };
+    expTl.to(scoreObj, {
+      val: 98.4,
+      duration: 2,
+      ease: "power3.out",
+      onUpdate: () => {
+        document.getElementById("dx-score").innerText = scoreObj.val.toFixed(1);
+      }
+    }, "-=1.5");
+
+    // 6. Loops de Vida do Sistema (Microinterações Contínuas)
+    // Oscilação Lenta do Gráfico
+    gsap.to(".bento-chart-line, .bento-chart-glow", {
+      y: -2,
+      duration: 3,
+      yoyo: true,
+      repeat: -1,
+      ease: "sine.inOut"
+    });
+
+    // Variação Numérica (Simulação Live)
+    setInterval(() => {
+      const dxEl = document.getElementById("dx-score");
+      if(dxEl) {
+        const current = parseFloat(dxEl.innerText);
+        if(current > 0) {
+          const diff = (Math.random() - 0.5) * 0.4;
+          const next = Math.max(95.0, Math.min(99.9, current + diff));
+          dxEl.innerText = next.toFixed(1);
+        }
+      }
+    }, 4000);
+
+    // Relógio
+    const timeEl = document.getElementById("live-time");
+    if(timeEl) {
+      setInterval(() => {
+        const now = new Date();
+        timeEl.innerText = now.toTimeString().split(' ')[0];
+      }, 1000);
+    }
+
+    // Mouse Glow Hover Effect
+    const bentoCards = document.querySelectorAll(".bento-card");
+    bentoCards.forEach(card => {
+      card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+        card.querySelector(".mouse-glow").style.opacity = "1";
+      });
+      card.addEventListener("mouseleave", () => {
+        card.querySelector(".mouse-glow").style.opacity = "0";
+      });
+    });
+
     });
   </script>
 </body>
