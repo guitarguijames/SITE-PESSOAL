@@ -7,35 +7,17 @@
   <title>Guilherme Muniz — Design & Engenharia Digital</title>
   <meta name="description" content="Estúdio especializado em design e engenharia de produtos digitais premium. Interfaces que convertem, experiências que marcam." />
 
-  <!-- tailwind runtime -->
-  <script src="assets/resource_3fa48481346f.es"></script>
+  <!-- tailwind css -->
+  <link rel="stylesheet" href="assets/css/tailwind.css" />
 
   <!-- iconify -->
-  <script src="assets/iconify-icon_e19829e7f0e8.js"></script>
+  <script src="assets/iconify-icon_e19829e7f0e8.js" defer></script>
+
+  <!-- preloads -->
+  <link rel="preload" href="assets/premium_ui_dashboard.png" as="image" fetchpriority="high">
+  <link rel="preload" href="logo Guilherme SEM FUNDO.png" as="image" fetchpriority="high">
 
   <!-- fonts -->
-  <link href="assets/css2_86e10c4bcbd4.css" rel="stylesheet" />
-  <link href="assets/css2_0fc20595ebff.css" rel="stylesheet" />
-  <link href="assets/css2_23afcbef9bdd.css" rel="stylesheet" />
-  <link href="assets/css2_82ced711bf49.css" rel="stylesheet" />
-  <link href="assets/css2_fa22aa91016e.css" rel="stylesheet" />
-  <link href="assets/css2_2b2d87bc82d8.css" rel="stylesheet" />
-  <link href="assets/css2_4fef849c83da.css" rel="stylesheet" />
-  <link href="assets/css2_a7b22b336fe1.css" rel="stylesheet" />
-  <link href="assets/css2_0b2072b66163.css" rel="stylesheet" />
-  <link href="assets/css2_9b8bf743d4a8.css" rel="stylesheet" />
-  <link href="assets/css2_8e191ef32247.css" rel="stylesheet" />
-  <link href="assets/css2_70fd47a02eed.css" rel="stylesheet" />
-  <link href="assets/css2_b52fc18295f8.css" rel="stylesheet" />
-  <link href="assets/css2_62759cd015bd.css" rel="stylesheet" />
-  <link href="assets/css2_f495c2faa2a6.css" rel="stylesheet" />
-  <link href="assets/css2_6f16cdd6fd9f.css" rel="stylesheet" />
-  <link href="assets/css2_94cb6f0c406a.css" rel="stylesheet" />
-  <link href="assets/css2_6c160a0c4e6f.css" rel="stylesheet" />
-  <link href="assets/css2_bd407d5ceb4b.css" rel="stylesheet" />
-  <link href="assets/css2_176e25227b5e.css" rel="stylesheet" />
-  <link href="assets/css2_e5ca562f8909.css" rel="stylesheet" />
-  <link href="assets/css2_bd311904ea29.css" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- css -->
@@ -45,10 +27,10 @@
   <link rel="stylesheet" href="assets/css/scroll-fix.css" />
 
   <!-- External Libs -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js"></script>
-  <script src="https://unpkg.com/split-type"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.39/dist/lenis.min.js" defer></script>
+  <script src="https://unpkg.com/split-type" defer></script>
 
   <style>
     /* Custom grid background */
@@ -108,6 +90,19 @@
       animation: scrollBounce 2.5s ease-in-out infinite;
     }
 
+    /* Otimizações de GPU / Performance */
+    .backdrop-blur-md, .backdrop-blur-sm, .backdrop-blur-\[2px\] {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+    .main-headline .word, .sub-headline, .buttons-wrapper {
+      will-change: transform, opacity, filter;
+    }
+    .typing-wrapper, .right-col-item, .hero-header, .tagline, .precision-line, .scroll-indicator {
+      will-change: transform, opacity;
+    }
+
     /* Lenis */
     html.lenis { height: auto; }
     .lenis.lenis-smooth { scroll-behavior: auto; }
@@ -122,7 +117,7 @@
   <!-- Background Layer Global (Video + Overlays) -->
   <div class="fixed inset-0 pointer-events-none z-0">
     <!-- Video de Fundo (opacidade aumentada para visibilidade) -->
-    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-[0.12]">
+    <video preload="metadata" autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover opacity-[0.12]">
       <source src="assets/bg-video.mp4" type="video/mp4">
     </video>
 
@@ -320,22 +315,24 @@
 
 
   <script>
-    // ─── Lenis Smooth Scroll ───
-    const lenis = new Lenis({
+    document.addEventListener('DOMContentLoaded', () => {
+      // ─── Lenis Smooth Scroll ───
+      const lenis = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
       wheelMultiplier: 1,
     });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
+    // Synchronize Lenis with GSAP Ticker for better performance
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+    gsap.ticker.lagSmoothing(0, 0);
 
     // ─── GSAP Setup ───
     gsap.registerPlugin(ScrollTrigger);
+    gsap.defaults({ force3D: true });
 
     // SplitType na Headline
     const headlineSplit = new SplitType('.main-headline', { types: 'lines, words, chars' });
@@ -499,15 +496,16 @@
       }
     });
 
-    // Hide scroll indicator on scroll
-    gsap.to('.scroll-indicator', {
-      opacity: 0,
-      scrollTrigger: {
-        trigger: "main",
-        start: "top top",
-        end: "100px top",
-        scrub: true
-      }
+      // Hide scroll indicator on scroll
+      gsap.to('.scroll-indicator', {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: "main",
+          start: "top top",
+          end: "100px top",
+          scrub: true
+        }
+      });
     });
   </script>
 </body>
